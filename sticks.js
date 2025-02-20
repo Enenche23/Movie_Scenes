@@ -1,10 +1,25 @@
-function changeScene(option) {
-    var message = "";
-    if (curScene == 0) {
-        curScene = 1;
-        message = "Your journey begins at a fork in the road.";
-    }
+// Initialize the current scene to scene 0 (Intro)
+var curScene = 0;
 
+function changeScene(option) {
+        // Clear the scene message
+        var message = "";
+    
+        if (curScene == 0) {
+                curScene = 1;
+                message = "Your journey begins at a fork in the road.";
+            }
+        
+        else if (curScene == 1) {
+            if (option == 1) {
+                curScene = 2;
+                message = "You have arrived at a cute little house in the woods.";
+            }
+            else  {
+                curScene = 3;        
+                message = "You are standing on the bridge overlooking a peaceful stream.";
+            }
+        }
     else if (curScene == 3) {
         if (option == 1) {
             curScene = 6;
@@ -28,5 +43,6 @@ function changeScene(option) {
     }
 
     document.getElementById("sceneImg").src="scene" + curScene + ".png";
+    if(message != "")
     alert(message);
- }
+}
