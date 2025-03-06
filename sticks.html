@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <head>
-    <script type="text/javascript" src="sticks.js"></script>
     <link rel="stylesheet" href="sticks.css">
     <title>My First Movie</title>
 </head>
 <body>
-    <div style="margin-top: 100px; text-align: center;">
-        <img id="sceneImg" src="scenes/Scene 1.png" alt="Stick Figure Adventure" /><br />
+   <div style="margin-top: 100px; text-align: center;"> 
+        <img src="Scene1.png" id="sceneImg" alt="sticks Image" /></br>
 
     Please Choose:
-        <button id="decision0" value="0" onclick="changeScene(src='scenes/Scene 1.png')" >1</button>
-        <button id="decision1" value="1" onclick="changeScene( src= 'scenes/Scene 1.png')" >2</button>
-        <button id="decision2" value="2" onclick="changeScene(src ='scenes/Scene 2.png')" />
-        <button id="decision3" value="3" onclick="changeScene('scenes/Scene 6.png')" />
-        <button id="decision4" value="4" onclick="changeScene('scenes/Scene 8.jpeg')" />
-        <button id="decision5" value="5" onclick="changeScene('scenes/Scene 5.png')" />
-        <button id="decision6" value="6" onclick="changeScene('scenes/Scene 6.png')" />
-        <button id="decision7" value="7" onclick="changeScene('scenes/Scene 7.png')" />
-        <button id="decision8" value="8" onclick="changeScene('scenes/Scene 8.jpeg')" />
-    </div>
+        <!-- <input type="button"  value="1" onclick="changeScene(1); firstImage();" />
+        <input type="button"  value="2" onclick="changeScene(2); secondImage();" /> -->
+        <button onclick="changeImage('Scene1.png')">1</button>
+        <button onclick="changeImage('Scene2.png')">2</button>
+        <!-- <button id="decision2" value="2" onclick="changeScene()" />
+        <button id="decision3" value="3" onclick="changeScene()" />
+        <button id="decision4" value="4" onclick="changeScene()" />
+        <button id="decision5" value="5" onclick="changeScene()" />
+        <button id="decision6" value="6" onclick="changeScene()" />
+        <button id="decision7" value="7" onclick="changeScene()" />
+        <button id="decision8" value="8" onclick="changeScene()" /> -->
+   </div>
 
+   <script>
+    function changeImage(fileName){
+        let img = document.querySelector("#sceneImg");
+        img.setAttribute("src", fileName);
+    }
+   </script>
 </body>
 </html>
