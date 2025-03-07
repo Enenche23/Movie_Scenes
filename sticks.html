@@ -1,31 +1,17 @@
 <!DOCTYPE html>
 <head>
+    <script src="sticks.js"></script>
     <link rel="stylesheet" href="sticks.css">
     <title>My First Movie</title>
 </head>
 <body>
-   <div style="margin-top: 100px; text-align: center;"> 
-        <img src="Scene1.png" id="sceneImg" alt="sticks Image" /></br>
+        <h2 id="sceneMessage">Welcome to Scene 1</h2>
+        <img src="Scene1.png" id="sceneImage" alt="sticks Image" /></br>
 
     Please Choose:
-        <!-- <input type="button"  value="1" onclick="changeScene(1); firstImage();" />
-        <input type="button"  value="2" onclick="changeScene(2); secondImage();" /> -->
-        <button onclick="changeImage('Scene1.png')">1</button>
-        <button onclick="changeImage('Scene2.png')">2</button>
-        <!-- <button id="decision2" value="2" onclick="changeScene()" />
-        <button id="decision3" value="3" onclick="changeScene()" />
-        <button id="decision4" value="4" onclick="changeScene()" />
-        <button id="decision5" value="5" onclick="changeScene()" />
-        <button id="decision6" value="6" onclick="changeScene()" />
-        <button id="decision7" value="7" onclick="changeScene()" />
-        <button id="decision8" value="8" onclick="changeScene()" /> -->
-   </div>
-
-   <script>
-    function changeImage(fileName){
-        let img = document.querySelector("#sceneImg");
-        img.setAttribute("src", fileName);
-    }
-   </script>
+        
+        <button onclick="changeScene(1)">Choice 1</button>
+        <button onclick="changeScene(2)">Choice 2</button>
+        
 </body>
 </html>
